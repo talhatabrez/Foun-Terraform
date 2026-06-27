@@ -9,7 +9,7 @@ terraform {
 }
 
 #resources
-resource "local_file" "hello_world" {
-  filename = "${path.module}/hello.txt"
-  content = "Hello!"
+resource "local_file" "variable_file" {
+  filename = "${path.module}/${var.my_filename}"
+  content = var.my_content
 }
